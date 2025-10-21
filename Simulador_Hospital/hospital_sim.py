@@ -12,12 +12,12 @@ from atividades import thread_consulta, thread_exames, thread_cirurgia, thread_l
 def fluxo_paciente(id_paciente: int, manager: HospitalResourceManager):
     """
     Representa o processo de um único paciente e seu fluxo no hospital.
-    [cite_start]Este é o "processo" paciente. [cite: 10]
+    Este é o "processo" paciente.
     """
     print(f"[Paciente {id_paciente}] *** Deu entrada no hospital. ***")
 
     # 1. Todo paciente realiza uma consulta
-    # Usamos um Evento para saber se a consulta foi bem-sucedida
+    # aq é para saber se a consulta foi bem-sucedida
     consulta_ok_evento = threading.Event()
     t_consulta = threading.Thread(
         target=thread_consulta, 

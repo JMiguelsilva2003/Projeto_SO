@@ -24,7 +24,7 @@ def thread_consulta(id_paciente: int, manager: HospitalResourceManager, evento_s
 
 def thread_exames(id_paciente: int, manager: HospitalResourceManager):
     """
-    [cite_start]Simula a atividade de exames. [cite: 12]
+    Simula a atividade de exames.
     Requer: Nenhum recurso partilhado (conforme descrição).
     """
     print(f"[Paciente {id_paciente}] >> Iniciou exames.")
@@ -34,7 +34,7 @@ def thread_exames(id_paciente: int, manager: HospitalResourceManager):
 def thread_cirurgia(id_paciente: int, manager: HospitalResourceManager, evento_sucesso: threading.Event):
     """
     Simula a atividade de cirurgia.
-    [cite_start]Requer: 1 médico E 1 sala de cirurgia. [cite: 13]
+    Requer: 1 médico E 1 sala de cirurgia.
     """
     print(f"[Paciente {id_paciente}] -- Aguardando recursos para CIRURGIA...")
     
@@ -65,7 +65,7 @@ def thread_cirurgia(id_paciente: int, manager: HospitalResourceManager, evento_s
 def thread_leito(id_paciente: int, manager: HospitalResourceManager):
     """
     Simula a atividade de recuperação no leito.
-    [cite_start]Requer: 1 leito. [cite: 13]
+    Requer: 1 leito.
     """
     print(f"[Paciente {id_paciente}] -- Aguardando leito para recuperação...")
     
